@@ -25,7 +25,7 @@ SECRET_KEY = 'c2088#l4y0094k&d@h*kqi##wwuuw7g^gu^=p%_n(bn_15vs4z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wakeupdead.pythonanywhere.com']
 
 
 # Application definition
