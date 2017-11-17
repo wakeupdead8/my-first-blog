@@ -21,3 +21,5 @@ class SubscriberAdmin (admin.ModelAdmin):
         model = Subscriber
 
 admin.site.register(Subscriber, SubscriberAdmin)
+
+admin.site.register(Post)
