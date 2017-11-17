@@ -1,4 +1,4 @@
-<title>Главная</title>
+<title>{{ post.title }}</title>
 {% include 'base.html' %}
 
 <!-- Navigation -->
@@ -32,14 +32,14 @@
 
     <!-- Page Header -->
 {% block header %}
-    <header class="masthead" style="background-image: url('../static/img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('/static/img/post-base-bg.jpeg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Think Different</h1>
-              <span class="subheading">Here’s to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They’re not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. But the only thing you can’t do is ignore them. Because they change things. They push the human race forward. While some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.</span>
+              <h1>Disclaimer!</h1>
+              <span class="subheading">Все события, персонажы и обстоятельства в даном посте вымышленные, любое сходство с реальным миром случайное!</span>
             </div>
           </div>
         </div>
@@ -47,15 +47,13 @@
     </header>
 {% endblock %}
 
-
-    <!-- Main Content -->
+<!-- Main Content -->
 {% block main %}
-{% for post in posts %}
 <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="post-preview">
-                    <a href="{% url 'post_detail' pk=post.pk %}">
+                    <a>
                       <h2 class="post-title">
                         {{ post.title }}
                       </h2>
@@ -70,7 +68,6 @@
         </div>
       </div>
     </div>
-{% endfor %}
 {% endblock %}
 
 <!-- Footer -->
