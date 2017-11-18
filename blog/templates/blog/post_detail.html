@@ -61,6 +61,9 @@
                         {{ post.text }}
                       </h3>
                     </a>
+                    {% if user.is_authenticated %}
+                    <a class="btn btn-primary btn-orange" href="{% url 'post_edit' pk=post.pk %}">Редактировать</a><!-- edit post-->
+                    {% endif %}
                     <p class="post-meta">Posted by
                       <a href="{% url 'contact' %}">Sergey</a>
                       on {{ post.published_date }}</p>
